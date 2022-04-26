@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #f0ede8;
+}
+
+:root {
+    /*   color variables for Around Lanka css cards */
+    --clr-primary: rgb(255, 219, 0);
+    --clr-primary-hover: #29e6a7;
+    --clr-primary-dark: #039d69;
+    --clr-gray100: #f0f7f8;
+    --clr-gray200: #cfd8dc;
+    --clr-gray300: #a7b7be;
+    --clr-gray400: #6b7e86;
+    --clr-gray500: #425a65;
+}
+
+
+img {
+    vertical-align: middle;
+}
+
+
+
+nav {
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 10000;
+    color: rgb(255, 219, 0);
+    background-color: #064265;
+    ;
+}
+
+/*--------Sticky Navbar------------*/
+.sticky {
+    padding: 5px 100px;
+    background: #064265;
+}
+
+/*Sri lanka(Left nav)*/
+.logo {
+    font-family: 'Cookie', cursive;
+    position: relative;
+    font-weight: 700;
+    color: rgb(255, 219, 0);
+    text-decoration: none;
+    font-size: 4em;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+nav ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    list-style: none;
+}
+
+/*Destinations Plans Tours(right nav)*/
+nav ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(255, 219, 0);
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+/*underline after effect Navbar*/
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -12px;
+    transition: 0.4s;
+
+}
+
+/*------Applied underline effect Navbar------*/
+nav ul li a:hover:after {
+    width: 100%;
+    color: rgb(255, 219, 0);
+    transition: 0.5s;
+}
+
+/*---------Sticky Navbar Text--------*/
+.sticky ul li a,
+.sticky .logo {
+    color: rgb(255, 219, 0);
+}
+
+/*underline style*/
+.sticky ul li a:after {
+    content: "";
+    position: absolute;
+    color: rgb(255, 219, 0);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -12px;
+    transition: 0.4s;
+
+}
+
+.sticky ul li a:hover {
+    color: yellow;
+}
+
+/*--------Applied Underline Effect---------*/
+.sticky ul li a:hover:after {
+    width: 100%;
+
+}
+
+/*============= Footer Section =============*/
+
+footer {
+    padding: 40px 0;
+    font-family: 'Segoe UI';
+    font-weight: 400;
+    background-color: #064265;
+}
+
+footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: white
+}
+
+footer .social .app {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+footer .social .app:hover {
+    opacity: 0.9;
+}
+
+footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 0;
+    color: white;
+}
+
+footer ul li a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+footer ul li a:hover {
+    opacity: 1;
+}
+
+footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: rgb(255, 219, 0);
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------*/
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+
+  max-width: 100%;
+  border-radius: 5px;
+  height: 1500px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.mySlides {
+  display: none;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/*----------------------------------------------------------------------------------------------------*/
+.blog {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 10px;
+    height: 200;
+    width: 200;
+}
+
+.entry {
+    margin-top: 10px;
+}
+
+.main-title {
+    margin-left: 6rem;
+    padding-bottom: 7px;
+    font-family: 'Segoe UI';
+    font-size: 80px;
+    font-weight: 700;
+    color: #064265;
+}
+
+.sub-para {
+    font-family: 'Segoe UI';
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 6rem;
+    margin-inline-end: 35rem;
+    padding-bottom: 80px;
+}
+
+
+.pro1 {
+    font-size: 50px;
+    margin-left: 6rem;
+    padding-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.carousel,
+.carousel::before,
+.carousel::after {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+
+    box-sizing: border-box;
+    padding: 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-left: 6rem;
+    margin-bottom: 4rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 12rem));
+}
+
+.slide {
+    background-color: #f0f7f8;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+}
+
+.slide:visited {
+        text-decoration: none;
+        color: black;
+}
+
+.slide__title {
+    padding: 0.5rem 1rem;
+    color: #064265;
+}
+
+.slide__image {
+    height: 10rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.slide__description {
+    padding: 0 1rem;
+}
+
+
+
+.slide:hover {
+    transform: scale(1.02);
+}
+
+
+
+
+
+
+
+
+
+
+
+

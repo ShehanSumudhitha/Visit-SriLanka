@@ -1,0 +1,804 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+
+/*--Css cards---*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto+Condensed:wght@300&display=swap');
+
+/*--explore css cards--*/
+@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #f0ede8;
+    ;
+}
+
+
+:root {
+    /*   color variables for Around Lanka css cards */
+    --clr-primary: rgb(255, 219, 0);
+    --clr-primary-hover: #29e6a7;
+    --clr-primary-dark: #039d69;
+    --clr-gray100: #f0f7f8;
+    --clr-gray200: #cfd8dc;
+    --clr-gray300: #a7b7be;
+    --clr-gray400: #6b7e86;
+    --clr-gray500: #425a65;
+}
+
+body {
+    min-height: 200vh;
+}
+
+nav {
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 10000;
+}
+
+/*--------Sticky Navbar------------*/
+.sticky {
+    padding: 5px 100px;
+    background: #064265;
+}
+
+/*Sri lanka(Left nav)*/
+.logo {
+    font-family: 'Cookie', cursive;
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 4em;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+nav ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    list-style: none;
+}
+
+/*Destinations Plans Tours(right nav)*/
+nav ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+/*underline after effect Navbar*/
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -12px;
+    transition: 0.4s;
+
+}
+
+/*------Applied underline effect Navbar------*/
+nav ul li a:hover:after {
+    width: 100%;
+    color: rgb(255, 219, 0);
+    transition: 0.5s;
+}
+
+/*---------Sticky Navbar Text--------*/
+.sticky ul li a,
+.sticky .logo {
+    color: rgb(255, 219, 0);
+}
+
+/*underline style*/
+.sticky ul li a:after {
+    content: "";
+    position: absolute;
+    color: rgb(255, 219, 0);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -12px;
+    transition: 0.4s;
+
+}
+
+.sticky ul li a:hover {
+    color: yellow;
+}
+
+/*--------Applied Underline Effect---------*/
+.sticky ul li a:hover:after {
+    width: 100%;
+}
+
+/*Video*/
+video {
+
+    top: -90px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+}
+
+/*-------Introduction Section--------*/
+.gem {
+    text-align: center;
+    margin: auto;
+    padding-top: 30px;
+    font-family: 'Allison', cursive;
+    font-size: 80px;
+    font-weight: 800;
+    color: #064265;
+}
+
+.first-para {
+    padding-top: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin: auto;
+    font-family: 'Noto Sans HK', sans-serif;
+    padding-bottom: 100px;
+}
+
+/*----------------*/
+
+/*------Around Lanka Section------*/
+#lanka {
+    font-size: 50px;
+    margin-left: 6.66rem;
+    padding-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.blog {
+    margin-left: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 0.3fr));
+    grid-gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 70px;
+}
+
+.card {
+    overflow: hidden;
+    color: #fff;
+    background-color: #064265;
+    ;
+    border: 1px solid var(--clr-gray200);
+    box-shadow: 4px 4px var(--clr-gray200);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition:
+        border 200ms ease-in,
+        box-shadow 200ms ease-in;
+
+}
+
+.card__image {
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+    /*Maintaining the aspect ratio*/
+}
+
+.card__title {
+    padding: 1rem;
+}
+
+.card__description {
+    padding: 0 1rem;
+}
+
+.card__link {
+    text-decoration: none;
+    padding: 1rem;
+    font-weight: bold;
+    color: var(--clr-primary);
+}
+
+.card__link::after {
+    content: '\f061';
+    /*arrow*/
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: relative;
+    left: 0.5rem;
+}
+
+.card:hover {
+    border: 1px solid var(--clr-primary);
+    box-shadow: 8px 8px var(--clr-primary);
+
+}
+
+.card:hover .card__link::after {
+    /*arrow animation*/
+    animation: arrow 1s ease-in-out infinite alternate;
+
+}
+
+/*Activates the arrow motion*/
+@keyframes arrow {
+
+    0% {
+        left: 0.5rem;
+    }
+
+    100% {
+        left: 1.5rem;
+    }
+}
+
+/*-----------------------------*/
+
+/*------------Upcoming Events Section------------*/
+
+/*---Color variables for upcoming events---*/
+:root {
+    --clr-primary1: rgb(255, 219, 0);
+
+    --clr-primary-hover1: #29e6a7;
+    --clr-primary-dark1: #039d69;
+    --clr-gray1001: #f0f7f8;
+    --clr-gray2001: #cfd8dc;
+    --clr-gray3001: #a7b7be;
+    --clr-gray4001: #6b7e86;
+    --clr-gray5001: #425a65;
+}
+
+.picevent {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(elephant.jpg);
+}
+
+
+#event {
+    font-size: 50px;
+    margin-left: 6.66rem;
+    padding-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+    padding-top: 35px;
+}
+
+.carousel,
+.carousel::before,
+.carousel::after {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+
+    box-sizing: border-box;
+    padding: 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-left: 4rem;
+    margin-bottom: 4rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+}
+
+.slide {
+    background-color: var(--clr-gray1001);
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+}
+
+.slide__image {
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slide__title {
+    padding: 1rem;
+    color: #064265;
+}
+
+.slide__description {
+    padding: 0 1rem;
+}
+
+.slide__btn {
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid var(--clr-primary1);
+    background: transparent;
+    color: var(--clr-primary1);
+    border-radius: 0.2rem;
+    transition: background 200ms ease-in,
+        color 200ms ease-in;
+}
+
+.slide:hover {
+    transform: scale(1.02);
+}
+
+.slide:hover .slide__btn {
+    background: var(--clr-primary1);
+    color: #fff;
+}
+
+/*-------------------------------*/
+
+/*------------------- Explore --------------*/
+
+/*css variables*/
+
+:root {
+    --d: 700ms;
+    --e: cubic-bezier(0.19, 1, 0.22, 1);
+    --font-sans: 'Rubik', sans-serif;
+    --font-serif: 'Cardo', serif;
+}
+
+.explore {
+    font-size: 50px;
+    font-weight: 500;
+    padding-top: 30px;
+    margin-left: 6.66rem;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-bottom: 20px;
+}
+
+.effect {
+    height: 100%;
+}
+
+.explore-content {
+    box-sizing: border-box;
+
+    display: grid;
+    justify-content: center;
+
+    display: grid;
+    grid-gap: 2rem;
+    padding: 1rem;
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: var(--font-sans);
+    display: flex;
+
+}
+
+@media (min-width: 600px) {
+    .explore-contnet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 800px) {
+    .page-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.cardex {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    background-color: whitesmoke;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 600px) {
+    .cardex {
+        height: 350px;
+    }
+}
+
+.cardex:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-size: cover;
+    background-position: 0 0;
+    transition: transform calc(var(--d) * 1.5) var(--e);
+    pointer-events: none;
+}
+
+.cardex:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    pointer-events: none;
+
+    background-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.009) 11.7%,
+            rgba(0, 0, 0, 0.034) 22.1%,
+            rgba(0, 0, 0, 0.072) 31.2%,
+            rgba(0, 0, 0, 0.123) 39.4%,
+            rgba(0, 0, 0, 0.182) 46.6%,
+            rgba(0, 0, 0, 0.249) 53.1%,
+            rgba(0, 0, 0, 0.320) 58.9%,
+            rgba(0, 0, 0, 0.394) 64.3%,
+            rgba(0, 0, 0, 0.468) 69.3%,
+            rgba(0, 0, 0, 0.540) 74.1%,
+            rgba(0, 0, 0, 0.607) 78.8%,
+            rgba(0, 0, 0, 0.668) 83.6%,
+            rgba(0, 0, 0, 0.721) 88.7%,
+            rgba(0, 0, 0, 0.762) 94.1%,
+            rgba(0, 0, 0, 0.790) 100);
+
+    transform: translateY(-50%);
+    transition: transform calc(var(--d) * 2) var(--e);
+}
+
+.cardex:nth-child(1):before {
+    background-image: url(https://sandinmysuitcase.com/wp-content/uploads/2021/04/Kandy-Sri-Lanka.jpg.webp);
+}
+
+.cardex:nth-child(2):before {
+    background-image: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180221131329/iStock-641293560-1024x575.jpg);
+
+}
+
+.cardex:nth-child(3):before {
+    background-image: url(https://www.reddottours.com/uploads/Destinations/jaffna/Jaffna-gallery-pop-up-8.jpg);
+
+}
+
+.cardex:nth-child(4):before {
+    background-image: url(https://www.cunard.com/content/dam/cunard/inventory-assets/ports/CLB/CLB.jpg);
+
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    transition: transform var(--d) var(--e);
+    z-index: 1;
+}
+
+.content>.effect+.effect {
+    margin-top: 1rem;
+}
+
+.titlex {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.copy {
+    margin-top: 100px;
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 1.35;
+}
+
+.bn {
+    cursor: pointer;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 0.0.25rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: #064265;
+    border: none;
+}
+
+.bn:hover {
+    background-color: #064265;
+}
+
+.bn:focus {
+    outline: 1px dashed yellow;
+    outline-offset: 3px;
+}
+
+@media (hover: hover) and (min-width: 600px) {
+    .cardex:after {
+        transform: translateY(0);
+    }
+
+    .content {
+        transform: translateY(calc(100% - 4.5rem));
+    }
+
+    .content>.effect:not(.titlex) {
+        opacity: 0;
+        transform: translate(1rem);
+        transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+    }
+
+    .cardex:hover,
+    .cardex:focus-within {
+        align-items: center;
+    }
+
+    .cardex:hover:before,
+    .cardex:focus-within:before {
+        transform: translateY(-4%);
+    }
+
+    .cardex:hover:after,
+    .cardex:focus-within:after {
+        transform: translateY(-50%);
+    }
+
+    .cardex:hover .content,
+    .cardex:focus-within .content {
+        transform: translateY(0);
+    }
+
+    .cardex:hover .content>.effect:not(.titlex),
+    .cardex:focus-within .content>.effect:not(.titlex) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: calc(var(--d) / 8);
+    }
+
+    .cardex:focus-within:before,
+    .cardex:focus-within:after,
+    .cardex:focus-within .content,
+    .card:focus-within .content>.effect:not(.titlex) {
+        transition-duration: 0%;
+    }
+}
+
+/*=================================*/
+
+/*=================== @SRI LANKA GALLERY Section===================*/
+
+.atlanka {
+    font-size: 50px;
+    margin-left: 6.66rem;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 65px;
+    text-align: center;
+}
+
+.wrapper {
+
+    box-sizing: border-box;
+    margin: 100px auto;
+    max-width: 1100px;
+}
+
+.wrapper .navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .items {
+    display: flex;
+    max-width: 720px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.navbar .items .item {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 7px 25px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #064265;
+    border: 2px solid rgb(255, 219, 0);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar .items .active,
+.navbar .items .item:hover {
+    color: #fff;
+    background: rgb(255, 219, 0);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.gallery .image {
+    padding: 7px;
+    width: calc(100% / 4);
+}
+
+.gallery .image.hide {
+    display: none;
+}
+
+.gallery .image.show {
+    display: block;
+}
+
+.gallery .image span {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery .image img {
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+.gallery .image:hover img {
+    transform: scale(1.1);
+}
+
+@media(max-width: 1000px) {
+    .gallery .image {
+        width: calc(100% / 3);
+    }
+}
+
+@media(max-width: 800px) {
+    .gallery .image {
+        width: calc(100% / 3);
+    }
+}
+
+@media(max-width: 700px) {
+    .navbar .items {
+        max-width: 600px;
+    }
+
+    .navbar .items .item {
+        padding: 7px 15px;
+    }
+}
+
+@media(max-width: 600px) {
+    .navbar .items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar .items .item {
+        margin: 5px;
+    }
+
+    .gallery .image {
+        width: 100%;
+    }
+}
+
+/*====================*/
+
+/*============= Footer Section =============*/
+
+footer {
+    padding: 40px 0;
+    font-family: 'Segoe UI';
+    font-weight: 400;
+    background-color: #064265;
+}
+
+footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: white
+}
+
+footer .social .app {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+footer .social .app:hover {
+    opacity: 0.9;
+}
+
+footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 0;
+    color: white;
+}
+
+footer ul li a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+footer ul li a:hover {
+    opacity: 1;
+}
+
+footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: rgb(255, 219, 0);
+}

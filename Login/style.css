@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(bg2.jpeg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 400px;
+    min-height: 400px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: darkgray;
+    padding: 40px 30px;
+}
+
+.container .loginText{
+    color: dimgrey;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.container .loginWithSocial{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    margin-bottom: 25px;
+}
+
+.container .loginWithSocial a{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    text-decoration: none;
+    transition: .2s;
+    text-align: center;
+    color: white;
+}
+
+.container .loginWithSocial a i{
+    margin-right: 10px;
+}
+
+.container .loginWithSocial a.apple{
+    background: #A2AAAD
+    ; 
+}
+
+.container .loginWithSocial a.google{
+    background: #db4a39; 
+}
+
+.container .loginWithSocial a.facebook{
+    background: #4267B2; 
+}
+
+.container .loginWithSocial a.instagram{
+    background: #8a3ab9; 
+}
+
+.container .loginWithSocial a.apple:hover{
+    background: #525050; 
+}
+
+.container .loginWithSocial a.google:hover{
+    background: #963126; 
+}
+
+.container .loginWithSocial a.facebook:hover{
+    background: #244077; 
+}
+
+.container .loginWithSocial a.instagram:hover{
+    background: #5d1e81; 
+}
+
+
+.container .loginEmail .inputGroup{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.container .loginEmail .inputGroup input{
+    width: 100%;
+    height: 100%;
+    border: 2px solid whitesmoke;
+    padding: 15px 20px;
+    background: transparent;
+    outline: none;
+    transition: .2s;
+}
+
+.container .loginEmail .inputGroup input:focus, .container .loginEmail .inputGroup input:valid{
+    border-color: darkcyan;
+}
+
+.container .loginEmail .inputGroup .loginButton{
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: darkcyan;
+    color: white;
+}
+
+.container .loginEmail .inputGroup .loginButton:hover{
+    transform: translateY(-3px);
+    background: rgb(1, 92, 92);
+}
+
+.loginRegisterText{
+    color: #525050;
+    font-weight: 600;
+}
+
+.loginRegisterText a{
+    text-decoration: none;
+    color: darkcyan;
+}
+
+@media (max-width: 450px){
+    .container{
+        width: 300px;
+    }
+
+    .container .loginWithSocial{
+        display: block;
+    }
+
+    .container .loginWithSocial a{
+        display: block;
+    }
+
+}
